@@ -13,7 +13,8 @@ export const reactRendererMiddleware = reactRenderer(
     // Idea borrowed from Honox's link component:
     // https://github.com/honojs/honox/blob/main/src/server/components/link.tsx
     const assetImportTags = (() => {
-      if (!import.meta.env.PROD) {
+      // HACK - Not going to prod here...
+      if (true || !import.meta.env.PROD) {
         return <script type="module" src="/src/client/index.tsx" />;
       }
 
